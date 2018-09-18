@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="weather-data-loader" id="wdl-1">
+        <img src="assets/loader.svg" alt="">
+    </div>
+    <div class="row weather-data-show" id="wds-1">
+        <div class="col-6" ng-repeat="weather in weatherData">
+            
+            <a href="#!weather/{{weather.loc.woeid}}" data-woeid="{{weather.loc.woeid}}">
+                <div class="weather-dir" >
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="wdata city">City :  {{weather.loc.title}}</div>
+                            <div class="wdata temp"> Temprature :  {{weather.data.consolidated_weather[0].the_temp}}</div>
+                            <div class="wdata min_temp"> Min Temprature : {{weather.data.consolidated_weather[0].min_temp}}</div>
+                            <div class="wdata max_temp"> Max Temprature :  {{weather.data.consolidated_weather[0].max_temp}}</div>
+                        </div>
+                        <div class="col-6">
+                            <img src="https://www.metaweather.com/static/img/weather/{{weather.data.consolidated_weather[0].weather_state_abbr}}.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="weather-data-loader" id="wdl-2">
+            <img src="assets/loader.svg" alt="">
+    </div>
+    <div class="row weather-data-show" id="wds-2">
+        <div class="col-6 weather-dir" >
+            <div class="row">
+                <div class="col-8" style="margin: auto">
+                    <div class="wdata city">City : <span>{{wDetails.title}} </span> </div>
+                    <div class="wdata city">Lat,Lon : <span>{{wDetails.latt_long}} </span> </div>
+                    <div class="wdata city">Sunset : <span>{{wDetails.sun_rise}} </span> </div>
+                    <div class="wdata city">Sunrise : <span>{{wDetails.sun_set}} </span> </div>
+                    <div class="wdata city">Time Zone : <span>{{wDetails.timezone}} </span> </div>
+                    <div class="row wdata" ng-repeat="weather in wDetails.consolidated_weather">
+                        <div class="col-9">
+                                <div class="wdata temp"> Day : <span>{{weather.applicable_date | formatDate}} </span> </div>
+                                <div class="wdata temp"> Date : <span>{{weather.applicable_date}} </span> </div>
+                                <div class="wdata temp"> Temprature : <span>{{weather.the_temp}} </span> </div>
+                                <div class="wdata min_temp"> Min Temprature : <span>{{weather.min_temp}} </span> </div>
+                                <div class="wdata max_temp"> Max Temprature : <span>{{weather.max_temp}} </span> </div>
+                                <div class="wdata max_temp"> Air Pressure : <span>{{weather.air_pressure}} </span> </div>
+                                <div class="wdata max_temp"> Humidity : <span>{{weather.humidity}} </span> </div>
+                                <div class="wdata max_temp"> Predictability : <span>{{weather.predictability}} </span> </div>
+                                <div class="wdata max_temp"> Weather State : <span>{{weather.weather_state_name}} </span> </div>
+                                <div class="wdata max_temp"> Wind Speed : <span>{{weather.wind_speed}} </span> </div>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://www.metaweather.com/static/img/weather/{{weather.weather_state_abbr}}.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="https://www.metaweather.com/static/img/weather/{{wDetails.consolidated_weather[0].weather_state_abbr}}.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        

@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="weather-data-loader" id="wdl-2">
+                <img src="assets/loader.svg" alt="">
+        </div>
+        <div class="row weather-data-show" id="wds-2">
+            <div class="col-6 weather-dir" >
+                <div class="row">
+                    <div class="col-8" style="margin: auto">
+                        <div class="wdata city">City : <span>{{wDetails.title}} </span> </div>
+                        <div class="wdata city">Lat,Lon : <span>{{wDetails.latt_long}} </span> </div>
+                        <div class="wdata city">Sunset : <span>{{wDetails.sun_rise}} </span> </div>
+                        <div class="wdata city">Sunrise : <span>{{wDetails.sun_set}} </span> </div>
+                        <div class="wdata city">Time Zone : <span>{{wDetails.timezone}} </span> </div>
+                        <div class="wdata temp"> Temprature : <span>{{wDetails.consolidated_weather[0].the_temp}} </span> </div>
+                        <div class="wdata min_temp"> Min Temprature : <span>{{wDetails.consolidated_weather[0].min_temp}} </span> </div>
+                        <div class="wdata max_temp"> Max Temprature : <span>{{wDetails.consolidated_weather[0].max_temp}} </span> </div>
+                        <div class="wdata max_temp"> Air Pressure : <span>{{wDetails.consolidated_weather[0].air_pressure}} </span> </div>
+                        <div class="wdata max_temp"> Humidity : <span>{{wDetails.consolidated_weather[0].humidity}} </span> </div>
+                        <div class="wdata max_temp"> Predictability : <span>{{wDetails.consolidated_weather[0].predictability}} </span> </div>
+                        <div class="wdata max_temp"> Predictability : <span>{{wDetails.consolidated_weather[0].predictability}} </span> </div>
+                        <div class="wdata max_temp"> Weather State : <span>{{wDetails.consolidated_weather[0].weather_state_name}} </span> </div>
+                        <div class="wdata max_temp"> Wind Speed : <span>{{wDetails.consolidated_weather[0].wind_speed}} </span> </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://www.metaweather.com/static/img/weather/{{wDetails.consolidated_weather[0].weather_state_abbr}}.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row weather-data-error">
+            No data Found ! ! ! 
+        </div>
+</div>
+
+    
+            
